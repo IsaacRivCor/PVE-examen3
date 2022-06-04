@@ -1,0 +1,80 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.boton-nice{
+  display: inline-flex;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.boton-nice::after{
+  content: "";
+  width: calc(100% + 60px);
+  height: 100%;
+  /*background-color: rgb(52, 89, 230);*/
+  position: absolute;
+  left: calc(-100% - 80px);
+  top: 0;
+  transition: .4s ease-in-out all;
+  border-bottom: 50px solid rgb(52, 89, 230);
+  border-right: 50px solid transparent;
+  z-index: 1;
+}
+
+.boton-nice a{
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.boton-nice:hover{
+  color: white;
+  text-decoration: none;
+  transition: .4s ease-in-out all;
+}
+
+.boton-nice:hover::after{
+  left: 0;
+  transition: .4s ease-in-out all;
+}
+
+.titulo{
+  color: rgb(52,89,230);
+  text-transform: uppercase;
+}
+
+.titulo-divisor{
+  height: 0.4rem;
+  width: 5rem;
+  margin: 1rem;
+  background-color: rgb(255,157,24);
+  border-radius: 0.25rem;
+}
